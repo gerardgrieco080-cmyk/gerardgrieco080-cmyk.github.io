@@ -8,101 +8,210 @@
                 *{
                     margin: 0;
                     padding:0;
+                    box-sizing: border-box;
                 }
                 header{background-color: #4B5748;
                        font-family: "Lucida Bright", Georgia, serif;
+                       padding: 15px 20px;
                 }
-                .logo{width: 400px;}
-                .chisiamo{width: 200px;}
-                .perchesceglierci{width: 240px;}
-                .conosciteam{width: 280px;}
+                body { font-family: "Lucida Bright", Georgia, serif;
+                }
+
+                header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    gap: 30px;
+                    flex-wrap: wrap;
+                }
+
+                .header-logo {
+                    flex-shrink: 0;
+                }
+
+                .header-logo img {
+                    width: 150px;
+                    height: auto;
+                }
+
+                .header-nav {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    gap: 30px;
+                    flex: 1;
+                    min-width: 300px;
+                }
+
                 a.cool-link {
-                position: relative;
-                color: #ffffff;
-                text-decoration: none;
-                font-weight: 500;
+                    position: relative;
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 14px;
+                    white-space: nowrap;
                 }
 
                 a.cool-link::after {
-                content: "";
-                position: absolute;
-                width: 0;
-                height: 2px;
-                left: 0;
-                bottom: -2px;
-                background-color: #ffffff;
-                transition: width 0.3s ease;
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    left: 0;
+                    bottom: -2px;
+                    background-color: #ffffff;
+                    transition: width 0.3s ease;
                 }
 
                 a.cool-link:hover::after {
-                width: 100%;
+                    width: 100%;
                 }
-                .scritta{font-family: "Lucida Bright", Georgia, serif;
-                        background-color:#CEEDCF;
-                        width: 1332px;}
-                h1{font-family: "Lucida Bright", Georgia, serif;
-                    color: #007D02;}
-                footer{background-color:rgb(33, 56, 56);
+
+                .scritta {
+                    font-family: "Lucida Bright", Georgia, serif;
+                    background-color: #CEEDCF;
+                    padding: 20px;
                 }
-                .scrittefooter{color:white;
-                               font-family: "Roboto Mono", monospace;
+
+                .scritta-content {
+                    display: flex;
+                    gap: 20px;
+                    flex-wrap: wrap;
                 }
-                footer{background-color:rgb(33, 56, 56);
+
+                .scritta-text {
+                    flex: 1;
+                    min-width: 300px;
                 }
-                .scrittefooter{color:white;
-                               font-family: "Roboto Mono", monospace;
+
+                .scritta-image {
+                    flex-shrink: 0;
                 }
-                .tdcontatti{padding-left: 100px;}
-            
-                div{
-                    margin-left: 950px;
+
+                .scritta-image img {
+                    width: 100%;
+                    max-width: 700px;
+                    height: auto;
                 }
+
+                h1 {
+                    font-family: "Lucida Bright", Georgia, serif;
+                    color: #007D02;
+                    text-align: center;
+                    padding: 20px 10px;
+                    font-size: clamp(24px, 5vw, 40px);
+                }
+
+                footer {
+                    background-color: rgb(33, 56, 56);
+                    padding: 30px 20px;
+                }
+
+                .footer-content {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-around;
+                    gap: 30px;
+                    margin-bottom: 20px;
+                    flex-wrap: wrap;
+                }
+
+                .footer-section {
+                    flex: 1;
+                    min-width: 200px;
+                    text-align: center;
+                }
+
+                .footer-section img {
+                    width: 150px;
+                    height: auto;
+                    margin-bottom: 10px;
+                }
+
+                .scrittefooter {
+                    color: white;
+                    font-family: "Roboto Mono", monospace;
+                }
+
+                footer div.divfooter {
+                    margin-left: 0;
+                    text-align: center;
+                    padding: 20px;
+                }
+
+                @media (min-width: 768px) {
+                    .scritta-content {
+                        flex-wrap: nowrap;
+                    }
+                }
+
+                @media (min-width: 1200px) {
+                    .scritta-image img {
+                        width: 700px;
+                    }
+                }
+
             </style>
         </head>  
         <body>
-            <header><table>
-                <tr>
-                    <td rowspan = "2" class = "logo"><a href="./sito.html"><img src = "./immagini/Logo_RevEco2.png" alt = "logo" width = "200" style="margin-left: 30px;"/></a></td>
-                    <td class = "chisiamo"><a class="cool-link" href="./chisiamo.html">CHI SIAMO</a></td>
-                    <td class = "perchesceglierci"><a class="cool-link" href="./perchesceglierci.html">PERCH&Eacute; SCEGLIERCI</a></td>
-                    <td class = "conosciteam"><a class="cool-link" href="./conosciteam.html">CONOSCI IL TEAM </a></td>
-                </tr>
-            </table>
-        </header>
+            <header>
+                <div class="header-logo">
+                    <a href="./sito.html"><img src = "./immagini/Logo_RevEco2.png" alt = "logo"/></a>
+                </div>
+                <nav class="header-nav">
+                    <a class="cool-link" href="./chisiamo.html">CHI SIAMO</a>
+                    <a class="cool-link" href="./perchesceglierci.html">PERCHÉ SCEGLIERCI</a>
+                    <a class="cool-link" href="./conosciteam.html">CONOSCI IL TEAM</a>
+                </nav>
+            </header>
 
              <h1>RevEco</h1>
-                    <table class = "scritta">
-                        <tr>
-                            <td>Siamo un’azienda nata il 2 febbraio 2026 a Sassuolo, fondata con l’obiettivo di dare una risposta concreta a uno dei problemi più gravi e attuali del nostro
-                                pianeta: l’inquinamento ambientale. L’idea dell’azienda nasce da un percorso di riflessione, confronto e osservazione della realtà quotidiana, in cui abbiamo
-                                riconosciuto quanto le azioni di ogni giorno, seppur piccole, abbiano un impatto enorme sull’ambiente che ci circonda. Da qui è maturata la volont&agrave;
-                                di creare una realtà innovativa, capace di unire responsabilit&agrave; ambientale, tecnologia e visione per il futuro.
-                                La nostra azienda si basa su valori chiari e condivisi: sostenibilit&agrave;, innovazione e impegno sociale. Crediamo che il cambiamento non debba essere imposto,
+                    <div class = "scritta">
+                        <div class="scritta-content">
+                            <div class="scritta-text">
+                                Siamo un'azienda nata il 2 febbraio 2026 a Sassuolo, fondata con l'obiettivo di dare una risposta concreta a uno dei problemi più gravi e attuali del nostro
+                                pianeta: l'inquinamento ambientale. L'idea dell'azienda nasce da un percorso di riflessione, confronto e osservazione della realtà quotidiana, in cui abbiamo
+                                riconosciuto quanto le azioni di ogni giorno, seppur piccole, abbiano un impatto enorme sull'ambiente che ci circonda. Da qui è maturata la volontà
+                                di creare una realtà innovativa, capace di unire responsabilità ambientale, tecnologia e visione per il futuro.
+                                La nostra azienda si basa su valori chiari e condivisi: sostenibilità, innovazione e impegno sociale. Crediamo che il cambiamento non debba essere imposto,
                                 ma reso semplice e accessibile a tutti. Per questo lavoriamo ogni giorno per sviluppare soluzioni intelligenti che aiutino le persone a compiere scelte più consapevoli, 
-                                senza complicazioni. Sassuolo, citt&agrave; dinamica e attenta all’innovazione, rappresenta il punto di partenza ideale per un progetto che guarda al futuro e punta a espandersi,
-                                mantenendo sempre al centro il rispetto per l’ambiente.</br></br></br>
+                                senza complicazioni. Sassuolo, città dinamica e attenta all'innovazione, rappresenta il punto di partenza ideale per un progetto che guarda al futuro e punta a espandersi,
+                                mantenendo sempre al centro il rispetto per l'ambiente.</br></br></br>
 
                                 Da questa visione nasce il nostro prodotto: RevBin. Un sistema intelligente e innovativo che utilizza sensori avanzati per analizzare il rifiuto inserito,
-                                riconoscerne il materiale e smistarlo automaticamente nel contenitore corretto. In questo modo, RevBin elimina l’errore umano e rende la raccolta differenziata pi&ugrave;
+                                riconoscerne il materiale e smistarlo automaticamente nel contenitore corretto. In questo modo, RevBin elimina l'errore umano e rende la raccolta differenziata più
                                 semplice, veloce ed efficace per tutti.</br></br></br>
 
-                                Il nostro obiettivo &egrave; unire tecnologia e sostenibilit&agrave;, dimostrando che l’innovazione pu&ograve; essere un’alleata concreta dell’ambiente. Crediamo che il cambiamento
-                                inizi dai piccoli gesti quotidiani e che, grazie a strumenti intelligenti, ognuno possa contribuire a ridurre l’impatto ambientale. Il cestino futuristico non &egrave;
-                                solo un prodotto, ma un passo verso un futuro pi&ugrave; pulito, responsabile e consapevole.
-                            </td>
-                            <td><img src = "./immagini/fotoinquinamento.jpg" alt = "Immagine inquinamento" width = "700"/></td>     
-                        </tr> 
-                    </table>
+                                Il nostro obiettivo è unire tecnologia e sostenibilità, dimostrando che l'innovazione può essere un'alleata concreta dell'ambiente. Crediamo che il cambiamento
+                                inizi dai piccoli gesti quotidiani e che, grazie a strumenti intelligenti, ognuno possa contribuire a ridurre l'impatto ambientale. Il cestino futuristico non è
+                                solo un prodotto, ma un passo verso un futuro più pulito, responsabile e consapevole.
+                            </div>
+                            <div class="scritta-image">
+                                <img src = "./immagini/fotoinquinamento.jpg" alt = "Immagine inquinamento"/>
+                            </div>
+                        </div>
+                    </div>
                     <footer>
-                        <table>
-                            <tr>
-                                <td><a href="./sito.html"><img src = "./immagini/Logo_RevEco2.png" alt = "logo" width = "200" style="margin-left: 30px;"/></a></td>
-                                <td><h2 class="scrittefooter">CONTATTI</h2> <h5 class="scrittefooter">RevEco S.r.l.</h5><h5 class="scrittefooter">5 Piazza G. Falcone e P. Borsellino - 41049 Sassuolo MO</h5> <h5 class="scrittefooter">(Modena) - Italy Email: info@reveco.it</h5></td>
-                                <td><h2 class="scrittefooter tdcontatti">SOCIAL</h2> <h5 class="scrittefooter tdcontatti">INSTAGRAM</h5><h5 class="scrittefooter tdcontatti">TIKTOK</h5><h5 class="scrittefooter tdcontatti">YOUTUBE</h5> <h5 class="scrittefooter tdcontatti">FACEBOOK</h5></td>
-                            </tr>
-                        </table>
-                        <div>
-                            <h5 class="scrittefooter">© 2026 RevEco S.r.l. Tutti i diritti riservati</h5> </br>
+                        <div class="footer-content">
+                            <div class="footer-section">
+                                <a href="./sito.html"><img src = "./immagini/Logo_RevEco2.png" alt = "logo"/></a>
+                            </div>
+                            <div class="footer-section">
+                                <h2 class="scrittefooter">CONTATTI</h2>
+                                <h5 class="scrittefooter">RevEco S.r.l.</h5>
+                                <h5 class="scrittefooter">5 Piazza G. Falcone e P. Borsellino - 41049 Sassuolo MO</h5>
+                                <h5 class="scrittefooter">(Modena) - Italy Email: info@reveco.it</h5>
+                            </div>
+                            <div class="footer-section">
+                                <h2 class="scrittefooter">SOCIAL</h2>
+                                <h5 class="scrittefooter">INSTAGRAM</h5>
+                                <h5 class="scrittefooter">TIKTOK</h5>
+                                <h5 class="scrittefooter">YOUTUBE</h5>
+                                <h5 class="scrittefooter">FACEBOOK</h5>
+                            </div>
+                        </div>
+                        <div class="divfooter">
+                            <h5 class="scrittefooter">© 2026 RevEco S.r.l. Tutti i diritti riservati</h5>
                         </div>
                     </footer>
             
