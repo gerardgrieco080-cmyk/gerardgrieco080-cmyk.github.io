@@ -2,29 +2,51 @@
     <html lang = "it">
         <head>  
             <meta charset = "UTF-8"/>
-            <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Home</title>
             <style>
                 *{
                     margin: 0;
                     padding:0;
+                    box-sizing: border-box;
                 }
                 header{background-color: #4B5748;
                        font-family: "Lucida Bright", Georgia, serif;
+                       padding: 15px 20px;
+                       display: flex;
+                       align-items: center;
+                       justify-content: space-around;
+                       gap: 30px;
+                       flex-wrap: wrap;
                 }
                 body { font-family: "Lucida Bright", Georgia, serif;
                 }
 
-                .logo{width: 400px;}
-                .chisiamo{width: 200px;}
-                .perchesceglierci{width: 240px;}
-                .conosciteam{width: 280px;}
+                .header-logo {
+                    flex-shrink: 0;
+                }
+
+                .header-logo img {
+                    width: 150px;
+                    height: auto;
+                }
+
+                .header-nav {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    gap: 30px;
+                    flex: 1;
+                    min-width: 300px;
+                }
                 
                 a.cool-link {
                 position: relative;
                 color: #ffffff;
                 text-decoration: none;
                 font-weight: 500;
+                font-size: 14px;
+                white-space: nowrap;
                 }
 
                 a.cool-link::after {
@@ -47,16 +69,39 @@
                 h1{font-family: "Lucida Bright", Georgia, serif;
                     color: #007D02;}
                 footer{background-color:rgb(33, 56, 56);
+                       padding: 30px 20px;
                 }
+                
+                .footer-content {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-around;
+                    gap: 30px;
+                    margin-bottom: 20px;
+                    flex-wrap: wrap;
+                }
+
+                .footer-section {
+                    flex: 1;
+                    min-width: 200px;
+                    text-align: center;
+                }
+
+                .footer-section img {
+                    width: 150px;
+                    height: auto;
+                    margin-bottom: 10px;
+                }
+                
                 .scrittefooter{color:white;
                                font-family: "Roboto Mono", monospace;
                 }
-                .tdcontatti{padding-left: 100px;}
-            
+                
                 .divfooter{
-                    margin-left: 950px;
+                    text-align: center;
+                    padding: 20px;
                 }
-               
+            
                 .logorevecotab {
                 
                 background: #0e0e0e;
@@ -65,7 +110,7 @@
                 width: 5px;
 
                 }
-                
+
                 .reveco-checkout {
                 font-family: 'Segoe UI', Arial, sans-serif;
                 background: #0e0e0e;
@@ -187,7 +232,7 @@
                 }
 
                 .reveco-card-form input {
-                font-size: 14px;
+                font-size: 12px;
                 padding: 10px;
                 border-radius: 10px;
                 border: none;
@@ -219,15 +264,16 @@
             </style>
         </head>  
         <body>
-            <header><table>
-                <tr>
-                    <td rowspan = "2" class = "logo"><a href="./sito.html"><img src = "./immagini/Logo_RevEco2.png" alt = "logo" width = "200" style="margin-left: 30px;"/></a></td>
-                    <td class = "chisiamo"><a class="cool-link" href="./chisiamo.html">CHI SIAMO</a></td>
-                    <td class = "perchesceglierci"><a class="cool-link" href="./perchesceglierci.html">PERCH&Eacute; SCEGLIERCI</a></td>
-                    <td class = "conosciteam"><a class="cool-link" href="./conosciteam.html">CONOSCI IL TEAM </a></td>
-                </tr>
-            </table>
-        </header>
+            <header>
+                <div class="header-logo">
+                    <a href="./sito.html"><img src = "./immagini/Logo_RevEco2.png" alt = "logo"/></a>
+                </div>
+                <nav class="header-nav">
+                    <a class="cool-link" href="./chisiamo.html">CHI SIAMO</a>
+                    <a class="cool-link" href="./perchesceglierci.html">PERCHÉ SCEGLIERCI</a>
+                    <a class="cool-link" href="./conosciteam.html">CONOSCI IL TEAM</a>
+                </nav>
+            </header>
              
             
         <h1>RevEco - L'intelligenza che differenzia</h1>
@@ -374,15 +420,26 @@
                 </article>
             </section>
             <footer>
-                <table>
-                    <tr>
-                        <td><a href="./sito.html"><img src = "./immagini/Logo_RevEco2.png" alt = "logo" width = "200" style="margin-left: 30px;"/></a></td>
-                        <td><h2 class="scrittefooter">CONTATTI</h2> <h5 class="scrittefooter">RevEco S.r.l.</h5><h5 class="scrittefooter">5 Piazza G. Falcone e P. Borsellino - 41049 Sassuolo MO</h5> <h5 class="scrittefooter">(Modena) - Italy Email: info@reveco.it</h5></td>
-                        <td><h2 class="scrittefooter tdcontatti">SOCIAL</h2> <h5 class="scrittefooter tdcontatti">INSTAGRAM</h5><h5 class="scrittefooter tdcontatti">TIKTOK</h5><h5 class="scrittefooter tdcontatti">YOUTUBE</h5> <h5 class="scrittefooter tdcontatti">FACEBOOK</h5></td>
-                    </tr>
-                </table>
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <a href="./sito.html"><img src = "./immagini/Logo_RevEco2.png" alt = "logo"/></a>
+                    </div>
+                    <div class="footer-section">
+                        <h2 class="scrittefooter">CONTATTI</h2>
+                        <h5 class="scrittefooter">RevEco S.r.l.</h5>
+                        <h5 class="scrittefooter">5 Piazza G. Falcone e P. Borsellino - 41049 Sassuolo MO</h5>
+                        <h5 class="scrittefooter">(Modena) - Italy Email: info@reveco.it</h5>
+                    </div>
+                    <div class="footer-section">
+                        <h2 class="scrittefooter">SOCIAL</h2>
+                        <h5 class="scrittefooter">INSTAGRAM</h5>
+                        <h5 class="scrittefooter">TIKTOK</h5>
+                        <h5 class="scrittefooter">YOUTUBE</h5>
+                        <h5 class="scrittefooter">FACEBOOK</h5>
+                    </div>
+                </div>
                 <div class="divfooter">
-                    <h5 class="scrittefooter">© 2026 RevEco S.r.l. Tutti i diritti riservati</h5> </br>
+                    <h5 class="scrittefooter">© 2026 RevEco S.r.l. Tutti i diritti riservati</h5>
                 </div>
             </footer>
             
