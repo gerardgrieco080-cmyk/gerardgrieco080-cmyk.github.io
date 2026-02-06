@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+    <html lang = "it">
+        <head>  
+            <meta charset = "UTF-8"/>
+            <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+            <title>Perch&eacute; sceglierci</title>
+            <style>
+                *{
+                    margin: 0;
+                    padding:0;
+                }
+                header{background-color: #4B5748;
+                       font-family: "Lucida Bright", Georgia, serif;
+                }
+                .logo{width: 400px;}
+                .chisiamo{width: 200px;}
+                .perchesceglierci{width: 240px;}
+                .conosciteam{width: 280px;}
+                a.cool-link {
+                position: relative;
+                color: #ffffff;
+                text-decoration: none;
+                font-weight: 500;
+                }
+
+                a.cool-link::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 2px;
+                left: 0;
+                bottom: -2px;
+                background-color: #ffffff;
+                transition: width 0.3s ease;
+                }
+
+                a.cool-link:hover::after {
+                width: 100%;
+                }
+                section{font-family: "Lucida Bright", Georgia, serif;
+                        background-color:#CEEDCF;}
+                h3{font-family: "Lucida Bright", Georgia, serif;
+                    color: black;}
+               .recensione{background-color:#8da28c;
+                            width: 1332px;}
+                textarea{ border: 1px solid black;
+                                 border-radius: 5px;}
+                input[type = "submit"]{border: 3px solid black;
+                                        width: 90px;} 
+                .spostavideo{padding-left:300px;}
+                .commento{width: 50px;
+                    font-family: "Lucida Bright", Georgia, serif; }
+                    footer{background-color:rgb(33, 56, 56);
+                }
+                .scrittefooter{color:white;
+                               font-family: "Roboto Mono", monospace;
+                }
+                .tdcontatti{padding-left: 100px;}
+            
+                div{
+                    margin-left: 950px;
+                }
+                textarea{background-color: #4B5748;
+                         color:white;
+                }
+                input[type="submit"]{ width: 50%;
+                padding: 12px;
+                border-radius: 12px;
+                border: none;
+                background: linear-gradient(90deg, #000000, #000000);
+                color: #CEEDCF;
+                cursor: pointer;
+                font-size: 15px;
+                transition: 0.2s;
+                }
+                input[type="submit"]:hover{
+                    transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0,255,150,0.4);
+                }
+            </style>
+        </head>  
+        <body>
+            <header><table>
+                <tr>
+                    <td rowspan = "2" class = "logo"><a href="./sito.html"><img src = "./immagini/Logo_RevEco2.png" alt = "logo" width = "200" style="margin-left: 30px;"/></a></td>
+                    <td class = "chisiamo"><a class="cool-link" href="./chisiamo.html">CHI SIAMO</a></td>
+                    <td class = "perchesceglierci"><a class="cool-link" href="./perchesceglierci.html">PERCH&Eacute; SCEGLIERCI</a></td>
+                    <td class = "conosciteam"><a class="cool-link" href="./conosciteam.html">CONOSCI IL TEAM </a></td>
+                </tr>
+            </table>
+        </header>
+
+    </br>
+
+        <table class = "recensione">
+            <tr>
+                <td> <form action = "" method = "get">
+            <h3>Inserisci recensione: <img src="./immagini/5stelle.png" alt="5 stelle" width="100"/> </br><textarea rows = "15" cols = "20"></textarea></h3> 
+            <input type = "submit" value = "invia"/>  
+                </form></td>
+
+                <td class = "spostavideo">
+                <video controls width = "300;">
+                    <source src = "./media/videoita.mp4" type ="video/mp4"/>
+                </video>
+                </td>
+                <td><a href = "./media/videoing.mp4" type = "video/mp4" target="_blank"><img src = "./immagini/ing.png" alt = "English video" width = "40"/></a></td>
+                <td>English video</td>
+            </tr>
+        </table>
+        
+        <section>
+            <article>
+                <table>
+                    <tr>
+                        <td class="commento"><h4>Jennifer</h4></td>
+                        <td><img src="./immagini/4stelle.png" alt="4 stelle" width="100"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Ottimo prodotto, e servizio dell'azienda ECCELLENTE.</td></Ottimo>
+                    </tr>
+                </table>
+            </article>
+        <hr>
+            <article>
+                <table>
+                    <tr>
+                        <td class="commento"><h4>Kinaoui</h4></td>
+                        <td><img src="./immagini/5stelle.png" alt="5 stelle" width="100"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Prodotto eccellente!!</td>
+                    </tr>
+                </table>
+            </article>
+        <hr>
+            <article>
+                <table>
+                    <tr>
+                        <td class="commento"><h4>Dallari</h4></td>
+                        <td><img src="./immagini/1stella.png" alt="1 stelle" width="100"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Prodotto troppo inquinante, DA NON COMPRARE!</td>
+                    </tr>
+                </table>
+            </article>
+        <hr>
+            <article>
+                <table>
+                    <tr>
+                        <td class="commento"><h4>Mirko</h4></td>
+                        <td><img src="./immagini/3stelle.png" alt="3 stelle" width="100"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Ottimo prodotto, ma troppo ingombrante. Ridurrei la dimensione.</td>
+                    </tr>
+                </table>
+            </article>
+        <hr>
+            <article>
+                <table>
+                    <tr>
+                            <td class="commento"><h4>Pasquale</h4></td>
+                            <td><img src="./immagini/1stella.png" alt="1 stella" width="100"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Il sensore si è rotto dopo pochissimo tempo!!</td>
+                    </tr>
+                </table>
+            </article>
+            <hr>
+            <article>
+                <table>
+                    <tr>
+                            <td class="commento"><h4>Antonio</h4></td>
+                            <td><img src="./immagini/5stelle.png" alt="5 stelle" width="100"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Ottimo prodottto, comprer&ograve; ricuramente il prossimo modello</td>
+                    </tr>
+                </table>
+            </article>
+            <hr>
+            </section>
+            <footer>
+                <table>
+                    <tr>
+                        <td><a href="./sito.html"><img src = "./immagini/Logo_RevEco2.png" alt = "logo" width = "200" style="margin-left: 30px;"/></a></td>
+                        <td><h2 class="scrittefooter">CONTATTI</h2> <h5 class="scrittefooter">RevEco S.r.l.</h5><h5 class="scrittefooter">5 Piazza G. Falcone e P. Borsellino - 41049 Sassuolo MO</h5> <h5 class="scrittefooter">(Modena) - Italy Email: info@reveco.it</h5></td>
+                        <td><h2 class="scrittefooter tdcontatti">SOCIAL</h2> <h5 class="scrittefooter tdcontatti">INSTAGRAM</h5><h5 class="scrittefooter tdcontatti">TIKTOK</h5><h5 class="scrittefooter tdcontatti">YOUTUBE</h5> <h5 class="scrittefooter tdcontatti">FACEBOOK</h5></td>
+                    </tr>
+                </table>
+                <div>
+                    <h5 class="scrittefooter">© 2026 RevEco S.r.l. Tutti i diritti riservati</h5> </br>
+                </div>
+            </footer>
+         </body>
+    </html>   

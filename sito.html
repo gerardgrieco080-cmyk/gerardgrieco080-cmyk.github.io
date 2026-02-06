@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+    <html lang = "it">
+        <head>  
+            <meta charset = "UTF-8"/>
+            <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+            <title>Home</title>
+            <style>
+                *{
+                    margin: 0;
+                    padding:0;
+                }
+                header{background-color: #4B5748;
+                       font-family: "Lucida Bright", Georgia, serif;
+                }
+                body { font-family: "Lucida Bright", Georgia, serif;
+                }
+
+                .logo{width: 400px;}
+                .chisiamo{width: 200px;}
+                .perchesceglierci{width: 240px;}
+                .conosciteam{width: 280px;}
+                
+                a.cool-link {
+                position: relative;
+                color: #ffffff;
+                text-decoration: none;
+                font-weight: 500;
+                }
+
+                a.cool-link::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 2px;
+                left: 0;
+                bottom: -2px;
+                background-color: #ffffff;
+                transition: width 0.3s ease;
+                }
+
+                a.cool-link:hover::after {
+                width: 100%;
+                }
+               
+                section{font-family: "Lucida Bright", Georgia, serif;
+                        background-color:#CEEDCF;}
+                h1{font-family: "Lucida Bright", Georgia, serif;
+                    color: #007D02;}
+                footer{background-color:rgb(33, 56, 56);
+                }
+                .scrittefooter{color:white;
+                               font-family: "Roboto Mono", monospace;
+                }
+                .tdcontatti{padding-left: 100px;}
+            
+                .divfooter{
+                    margin-left: 950px;
+                }
+               
+                .logorevecotab {
+                
+                background: #0e0e0e;
+                padding: 25px;
+                border-radius: 16px;
+                width: 5px;
+
+                }
+                
+                .reveco-checkout {
+                font-family: 'Segoe UI', Arial, sans-serif;
+                background: #0e0e0e;
+                padding: 30px;
+                border-radius: 16px;
+                width: 380px;
+                color: white;
+                box-shadow: 0 10px 40px rgba(0,255,150,0.15);
+                }
+
+                .reveco-checkout h2 {
+                text-align: center;
+                margin-bottom: 25px;
+                color: #35b851;
+                }
+
+                .reveco-checkout label {
+                font-size: 14px;
+                margin-top: 12px;
+                display: block;
+                font-weight: 500;
+                }
+
+                .reveco-checkout input,
+                .reveco-checkout select {
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: none;
+                margin-top: 5px;
+                outline: none;
+                background: #1c1c1c;
+                color: white;
+                font-size: 14px;
+                box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+                }
+
+                .reveco-price {
+                margin: 18px 0;
+                font-size: 20px;
+                font-weight: bold;
+                color: #35b851;
+                text-align: center;
+                }
+
+                .reveco-checkout button {
+                width: 100%;
+                padding: 14px;
+                border-radius: 14px;
+                border: none;
+                background: linear-gradient(90deg, #35b851, #35b851);
+                color: black;
+                font-weight: bold;
+                cursor: pointer;
+                font-size: 16px;
+                margin-top: 15px;
+                transition: 0.25s;
+                }
+
+                .reveco-checkout button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0,255,150,0.4);
+                }
+
+                .reveco-modal {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.6);
+                display: none;
+                justify-content: center;
+                align-items: center;
+                backdrop-filter: blur(6px);
+                z-index: 9999;
+                }
+
+                .reveco-modal-content {
+                background: #121212;
+                padding: 28px;
+                border-radius: 20px;
+                width: 400px;
+                box-shadow: 0 0 25px rgba(0,255,150,0.3);
+                animation: reveco-pop 0.25s ease;
+                color: white;
+                }
+
+                @keyframes reveco-pop {
+                from {transform: scale(0.85); opacity: 0;}
+                to {transform: scale(1); opacity: 1;}
+                }
+
+                .reveco-close {
+                text-align: right;
+                font-size: 18px;
+                cursor: pointer;
+                color: #aaa;
+                margin-bottom: 15px;
+                }
+
+                .reveco-modal h3 {
+                color: #35b851;
+                text-align: center;
+                margin-bottom: 20px;
+                }
+
+                .reveco-card-form .input-group {
+                margin-bottom: 15px;
+                }
+
+                .reveco-card-form .input-row {
+                display: flex;
+                gap: 12px;
+                }
+
+                .reveco-card-form .input-row .input-group.small {
+                flex: 1;
+                }
+
+                .reveco-card-form input {
+                font-size: 14px;
+                padding: 10px;
+                border-radius: 10px;
+                border: none;
+                outline: none;
+                background: #1c1c1c;
+                color: white;
+                }
+
+                .reveco-card-form button {
+                width: 100%;
+                padding: 12px;
+                border-radius: 12px;
+                border: none;
+                background: linear-gradient(90deg, #35b851, #35b851);
+                color: black;
+                font-weight: bold;
+                margin-top: 10px;
+                cursor: pointer;
+                font-size: 15px;
+                transition: 0.2s;
+                }
+
+                .reveco-card-form button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0,255,150,0.4);
+                }
+
+
+            </style>
+        </head>  
+        <body>
+            <header><table>
+                <tr>
+                    <td rowspan = "2" class = "logo"><a href="./sito.html"><img src = "./immagini/Logo_RevEco2.png" alt = "logo" width = "200" style="margin-left: 30px;"/></a></td>
+                    <td class = "chisiamo"><a class="cool-link" href="./chisiamo.html">CHI SIAMO</a></td>
+                    <td class = "perchesceglierci"><a class="cool-link" href="./perchesceglierci.html">PERCH&Eacute; SCEGLIERCI</a></td>
+                    <td class = "conosciteam"><a class="cool-link" href="./conosciteam.html">CONOSCI IL TEAM </a></td>
+                </tr>
+            </table>
+        </header>
+             
+            
+        <h1>RevEco - L'intelligenza che differenzia</h1>
+            
+
+            <section>
+                
+                <article>
+                    <table>
+                        <tr>
+                            <td><h3>Compra anche tu il nuovissimo RevBin &nbsp;</h3></td>
+                        </tr>
+                        <tr> 
+                            <td>
+                                <div class="reveco-checkout">
+
+                                <h2>Acquista RevBin</h2>
+
+                                <label>Nome e Cognome</label>
+                                <input type="text" placeholder="Mario Rossi">
+
+                                <label>Email</label>
+                                <input type="email" placeholder="email@example.com">
+
+                                <label>Indirizzo di spedizione</label>
+                                <input type="text" placeholder="Via Roma 10, Milano">
+
+                                <label>Quantità</label>
+                                <input type="number" id="reveco-quantity" value="1" min="1">
+
+                                <div class="reveco-price" id="reveco-price">Totale: 299€</div>
+
+                                <label>Metodo di pagamento</label>
+                                <select id="reveco-payment">
+                                    <option value="paypal">PayPal</option>
+                                    <option value="card">Mastercard</option>
+                                </select>
+
+                                <button onclick="revecoPay()">Procedi al pagamento</button>
+                                </div>
+
+                                <div class="reveco-modal" id="reveco-cardModal">
+                                <div class="reveco-modal-content">
+                                    <div class="reveco-close" onclick="revecoCloseModal()">✕</div>
+                                    <h3>Pagamento con Mastercard</h3>
+
+                                    <div class="reveco-card-form">
+                                    <div class="input-group">
+                                        <label>Numero carta</label>
+                                        <input type="text" placeholder="1234 5678 9012 3456">
+                                    </div>
+                                    <div class="input-row">
+                                        <div class="input-group small">
+                                        <label>Scadenza (MM/AA)</label>
+                                        <input type="text" placeholder="MM/AA">
+                                        </div>
+                                        <div class="input-group small">
+                                        <label>CVV</label>
+                                        <input type="text" placeholder="123">
+                                        </div>
+                                    </div>
+                                    <button onclick="revecoConfirmPayment()">Conferma pagamento</button>
+                                    </div>
+                                </div>
+                                </div>
+                                <script>
+                                
+
+                                const revecoBasePrice = 299;
+                                const revecoQuantityInput = document.getElementById("reveco-quantity");
+                                const revecoPriceDiv = document.getElementById("reveco-price");
+
+                                const cardNumberInput = document.querySelector("#reveco-cardModal input[placeholder='1234 5678 9012 3456']");
+                                const expiryInput = document.querySelector("#reveco-cardModal input[placeholder='MM/AA']");
+                                const cvvInput = document.querySelector("#reveco-cardModal input[placeholder='123']");
+
+                               
+                                function revecoUpdatePrice() {
+                                const qty = parseInt(revecoQuantityInput.value) || 1;
+                                const total = qty * revecoBasePrice;
+                                revecoPriceDiv.innerText = "Totale: " + total + "€";
+                                }
+
+                                if (revecoQuantityInput) {
+                                revecoQuantityInput.addEventListener("input", revecoUpdatePrice);
+                                revecoUpdatePrice();
+                                }
+
+                               
+                                function revecoPay() {
+                                const method = document.getElementById("reveco-payment").value;
+
+                                if (method === "paypal") {
+                                    
+                                    window.open("https://www.paypal.com/signin", "_blank");
+                                } else {
+                                    document.getElementById("reveco-cardModal").style.display = "flex";
+                                }
+                                }
+
+                               
+                                function revecoCloseModal() {
+                                document.getElementById("reveco-cardModal").style.display = "none";
+                                }
+
+                                
+                                function revecoConfirmPayment() {
+
+                                const cardNumber = cardNumberInput.value.replace(/\D/g,'');
+                                const expiry = expiryInput.value.replace(/\D/g,'');
+                                const cvv = cvvInput.value.replace(/\D/g,'');
+
+                                if(cardNumber.length < 13) { alert("Numero carta non valido"); return; }
+                                if(expiry.length !== 4) { alert("Scadenza non valida"); return; }
+                                if(cvv.length < 3) { alert("CVV non valido"); return; }
+
+                                alert("Grazie per aver acquistato da RevEco!");
+                                revecoCloseModal();
+                                }
+
+                                cardNumberInput.addEventListener("input", ()=>{
+                                cardNumberInput.value = cardNumberInput.value.replace(/\D/g,'').replace(/(.{4})/g,'$1 ').trim();
+                                });
+
+                                expiryInput.addEventListener("input", ()=>{
+                                let v = expiryInput.value.replace(/\D/g,'');
+                                if(v.length > 4) v = v.slice(0,4);
+                                if(v.length > 2) v = v.slice(0,2) + "/" + v.slice(2);
+                                expiryInput.value = v;
+                                });
+
+                                cvvInput.addEventListener("input", ()=>{
+                                cvvInput.value = cvvInput.value.replace(/\D/g,'').slice(0,3);
+                                });
+
+                                </script>
+                            </td>
+                               
+                                <td class="logorevecotab"><img src = "./immagini/Immagine_prodotto.png" alt = "immagine dell'ultimo prodotto" width = "350"/></td>
+                                <td><a href = "./media/videoprodotto3d.mp4" target="_blank"><img src = "./immagini/icone3d.png" alt = "icona 3d" width = "50"/></a></td>
+                                <td>Clicca qui per il prodotto in 3D</td> 
+                        </tr> 
+                    </table>                                                                                              
+                </article>
+            </section>
+            <footer>
+                <table>
+                    <tr>
+                        <td><a href="./sito.html"><img src = "./immagini/Logo_RevEco2.png" alt = "logo" width = "200" style="margin-left: 30px;"/></a></td>
+                        <td><h2 class="scrittefooter">CONTATTI</h2> <h5 class="scrittefooter">RevEco S.r.l.</h5><h5 class="scrittefooter">5 Piazza G. Falcone e P. Borsellino - 41049 Sassuolo MO</h5> <h5 class="scrittefooter">(Modena) - Italy Email: info@reveco.it</h5></td>
+                        <td><h2 class="scrittefooter tdcontatti">SOCIAL</h2> <h5 class="scrittefooter tdcontatti">INSTAGRAM</h5><h5 class="scrittefooter tdcontatti">TIKTOK</h5><h5 class="scrittefooter tdcontatti">YOUTUBE</h5> <h5 class="scrittefooter tdcontatti">FACEBOOK</h5></td>
+                    </tr>
+                </table>
+                <div class="divfooter">
+                    <h5 class="scrittefooter">© 2026 RevEco S.r.l. Tutti i diritti riservati</h5> </br>
+                </div>
+            </footer>
+            
+        </body>
+</html>
