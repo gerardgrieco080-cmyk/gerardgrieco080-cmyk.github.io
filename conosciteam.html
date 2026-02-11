@@ -11,7 +11,7 @@
                     box-sizing: border-box;
                 }
                 header{background-color: #4B5748;
-                       font-family: "Lucida Bright", Georgia, serif;
+                       font-family: "Lucida Bright", Georgia, sans-serif;
                        padding: 15px 20px;
                        display: flex;
                        align-items: center;
@@ -36,6 +36,7 @@
                     gap: 30px;
                     flex: 1;
                     min-width: 300px;
+                    flex-wrap: wrap;
                 }
 
                 a.cool-link {
@@ -63,34 +64,50 @@
                 }
 
                 h1 {
-                    font-family: "Lucida Bright", Georgia, serif;
+                    font-family: "Lucida Bright", Georgia, sans-serif;
                     color: #007D02;
                     text-align: center;
                     padding: 20px 10px;
                     font-size: clamp(24px, 5vw, 40px);
                 }
 
-                .tabella{
-                    font-family: "Lucida Bright", Georgia, serif;
-                    background-color:#CEEDCF;
-                    width: 100%;
-                    border-collapse: collapse;
-                    padding: 20px;
+                .team-container {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 30px;
+                    padding: 40px 20px;
+                    background-color: #CEEDCF;
+                    flex-wrap: wrap;
+                    align-items: stretch;
                 }
 
-                .tabella td {
-                    padding: 20px;
+                .team-card {
+                    flex: 1;
+                    min-width: 280px;
+                    max-width: 350px;
                     text-align: center;
+                    font-family: "Lucida Bright", Georgia, sans-serif;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
                 }
 
-                .tabella img {
+                .team-card img {
                     width: 100%;
                     max-width: 350px;
                     height: auto;
+                    margin-top: auto;
+                    border-radius: 12px;
                 }
+
+
 
                 .email{
                     color: rgb(33, 56, 56);
+                }
+                .email-mucci{
+                    color: rgb(33, 56, 56);
+                    word-break: break-word;
                 }
 
                 footer{
@@ -132,6 +149,27 @@
                     color: #ffffff;
                     text-decoration: none;
                 }
+               img {
+                    max-width: 100%;
+                    height: auto;
+                }
+                @media (max-width: 768px) {
+                .team-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .team-card {
+                    width: 100%;
+                    max-width: 400px;
+                }
+
+                .email-mucci {
+                    color: rgb(33, 56, 56);
+                }
+                }
+
+                
             </style>
         </head>  
         <body>
@@ -148,23 +186,37 @@
             
             <h1>I nostri contatti</h1>
 
-            <table class = "tabella">
-                <tr>
-                    <td><strong>Grieco Gerard</strong></br></br>CEO</br> Web designer</td>
-                    <td><strong>Casoni Cristian</strong></br></br>Video maker</br>Web designer</td>
-                    <td><strong>Mucci Alessandro</strong></br></br>Chief marketing</br> officer</td> 
-                </tr>
-                <tr>
-                    <td><a href="mailto:grieco.gerard.studente@iisvolta.istruzioneer.it" class="email"> grieco.gerard.studente@iisvolta.istruzioneer.it</a></td>
-                    <td><a href = "mailto:casoni.cristian.studente@iisvolta.istruzioneer.it" class = "email">casoni.cristian.studente@iisvolta.istruzioneer.it</a></td>
-                    <td><a href = "mailto:mucci.alessandro.studente@iisvolta.istruzioneer.it" class = "email"> mucci.alessandro.studente@iisvolta.istruzioneer.it</a></td>
-                </tr>
-                <tr>
-                    <td><img src = "./immagini/fotogerard.jpg" alt = "foto gerard"/></td>
-                    <td><img src = "./immagini/fotocristian.jpg" alt = "foto cristian"/></td>
-                    <td><img src = "./immagini/fotoalessandro.jpg" alt = "foto alessandro"/></td>
-                </tr>
-            </table>
+            <div class="team-container">
+
+                <div class="team-card">
+                    <h3>Grieco Gerard</h3>
+                    <p>CEO<br>Web designer</p>
+                    <a href="mailto:grieco.gerard.studente@iisvolta.istruzioneer.it" class="email">
+                        grieco.gerard.studente@iisvolta.istruzioneer.it
+                    </a>
+                    <img src="./immagini/fotogerard.jpg" alt="foto gerard">
+                </div>
+            
+                <div class="team-card">
+                    <h3>Casoni Cristian</h3>
+                    <p>Video maker<br>Web designer</p>
+                    <a href="mailto:casoni.cristian.studente@iisvolta.istruzioneer.it" class="email">
+                        casoni.cristian.studente@iisvolta.istruzioneer.it
+                    </a>
+                    <img src="./immagini/fotocristian.jpg" alt="foto cristian">
+                </div>
+            
+                <div class="team-card">
+                    <h3>Mucci Alessandro</h3>
+                    <p>Chief marketing<br> officer</p>
+                    <a href="mailto:mucci.alessandro.studente@iisvolta.istruzioneer.it" class="email-mucci">
+                        mucci.alessandro.studente@iisvolta.istruzioneer.it
+                    </a>
+                    <img src="./immagini/fotoalessandro.jpg" alt="foto alessandro">
+                </div>
+            
+            </div>
+            
 
             <footer>
                 <div class="footer-content">

@@ -11,7 +11,7 @@
                     box-sizing: border-box;
                 }
                 header{background-color: #4B5748;
-                       font-family: "Lucida Bright", Georgia, serif;
+                       font-family: "Lucida Bright", Georgia, sans-serif;
                        padding: 15px 20px;
                        display: flex;
                        align-items: center;
@@ -62,20 +62,26 @@
                     width: 100%;
                 }
 
-                section{font-family: "Lucida Bright", Georgia, serif;
+                section{font-family: "Lucida Bright", Georgia, sans-serif;
                         background-color:#CEEDCF;}
-                h3{font-family: "Lucida Bright", Georgia, serif;
+                h3{font-family: "Lucida Bright", Georgia, sans-serif;
                     color: black;}
-               .recensione{background-color:#8da28c;
-                            width: 100%;
-                            padding: 20px;}
+                .recensione {
+                    display: flex;
+                    background-color:#8da28c;
+                    justify-content: center;
+                    padding: 10px;
+                    gap: 10px;
+                }
                 textarea{ border: 1px solid black;
                                  border-radius: 5px;}
                 input[type = "submit"]{border: 3px solid black;
                                         width: 90px;} 
-                .spostavideo{padding-left:300px;}
+               .spostavideo video {
+                    display: block;
+                }
                 .commento{width: 50px;
-                    font-family: "Lucida Bright", Georgia, serif; }
+                    font-family: "Lucida Bright", Georgia, sans-serif; }
                     footer{background-color:rgb(33, 56, 56);
                            padding: 30px 20px;
                 }
@@ -83,16 +89,18 @@
                                font-family: "Roboto Mono", monospace;
                 }
             
-                textarea{background-color: #4B5748;
-                         color:white;
+                textarea{background-color: white;
+                         color: black;
+                          border-radius: 12px;
+                          font-size: 27px;
                 }
-                input[type="submit"]{ width: 31%;
+                input[type="submit"]{ width: 15%;
                 padding: 12px;
                 border-radius: 12px;
                 border: none;
                 background: linear-gradient(90deg, #000000, #000000);
                 color: #CEEDCF;
-                cursor: pointer;
+                cursor: poLucida Bright;
                 font-size: 15px;
                 transition: 0.2s;
                 }
@@ -134,6 +142,23 @@
                     color: #ffffff;
                     text-decoration: none;
                 }
+                
+                .videoing a {
+                    display: inline-block;
+                }
+
+                .videotext {
+                    font-family: "Lucida Bright", Georgia, sans-serif;
+                    font-size: 14px;
+                    line-height: 1.2;
+                }
+                @media (max-width: 768px) {
+                .recensione-row {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                }
+                
             </style>
         </head>  
         <body>
@@ -150,24 +175,29 @@
 
             </br>
 
-            <table class = "recensione">
-                <tr>
-                    <td> <form action = "" method = "get">
-                <h3>Inserisci recensione: <img src="./immagini/5stelle.png" alt="5 stelle" width="100"/> </br><textarea rows = "10" cols = "20"></textarea></h3> 
-                <input type = "submit" value = "invia"/>  
-                    </form></td>
-
-                    <td class = "spostavideo">
-                    <video controls width = "300;">
-                        <source src = "./media/videoita.mp4" type ="video/mp4"/>
-                    </video>
-                    </td>
-                    <td><a href = "./media/videoing.mp4" type = "video/mp4" target="_blank"><img src = "./immagini/ing.png" alt = "English video" width = "40"/></a></td>
-                    <td>English video</td>
-                </tr>
-            </table>
+            <div class="recensione">
+                <div class="recensione-row">
+                    <div class="spostavideo">
+                        <video controls width="300">
+                            <source src="./media/videoita.mp4" type="video/mp4"/>
+                        </video>
+                    </div>
+                    <div class="videoing">
+                        <a href="./media/videoing.mp4" target="_blank">
+                            <img src="./immagini/ing.png" alt="English video" width="40"/>
+                        </a>
+                    </div>
+                    <div class="videotext">
+                        English video
+                    </div>
+                </div>
+            </div>
             
             <section>
+                <form action = "" method = "get">
+                <h3>Inserisci recensione: <img src="./immagini/5stelle.png" alt="5 stelle" width="100"/> </br><textarea rows = "1" cols = "17"></textarea></h3> 
+                <input type = "submit" value = "invia"/>  
+                    </form>
                 <article>
                     <table>
                         <hr>
